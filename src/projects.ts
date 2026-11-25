@@ -41,7 +41,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'geomate', name: 'Geomate', category: 'TABLET & WEB APPLICATION', date: '2026.10 – 2026.11', thumbnail: 'images/geomate-student-class.png',
+    id: 'geomate', name: 'Geomate', category: 'TABLET & WEB APPLICATION', date: '2026.10 – 2026.11', thumbnail: 'images/geomate-cover-public.png',
     tagline: '도형을 직접 만지며 이해하는 기하 학습',
     description: '학생이 태블릿에서 도형을 돌리고 펼치며 탐구하고, 선생님과 함께 학습을 이어가는 기하 학습 서비스.',
     tags: ['TypeScript', 'React Native', 'Expo', 'TanStack Query', 'Zustand', 'React · Vite'],
