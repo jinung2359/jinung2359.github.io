@@ -64,4 +64,4 @@ export const projects: Project[] = [
       { title: '태블릿 키보드가 입력칸을 가림', problem: '화면 끝까지 그리는 Android 환경에서 키보드가 떠도 앱 영역이 줄지 않음', implementation: '키보드가 가리는 높이를 재는 공통 훅 구현\n입력 영역에 여백을 주어 기기에서 표시 확인' },
     ],
   },
-];
+].reverse();
