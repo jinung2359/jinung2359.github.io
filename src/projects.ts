@@ -46,11 +46,12 @@ export const projects: Project[] = [
     description: '학생이 태블릿에서 도형을 돌리고 펼치며 탐구하고, 선생님과 함께 학습을 이어가는 기하 학습 서비스.',
     tags: ['TypeScript', 'React Native', 'Expo', 'TanStack Query', 'Zustand', 'React · Vite'],
     images: [
-      { src: 'images/geomate-role-choice.png', label: '시작 화면', alt: '학생과 선생님 중 시작 역할을 고르는 화면', note: '학생·선생님으로 이어지는 서비스의 시작 화면', contributed: false },
+      { src: 'images/geomate-student-home-public.png', label: '학생 홈', alt: '예제와 내 문제, 복습과 문제함이 보이는 지오메이트 학생 홈', note: '서비스의 학생 홈 화면. 공개용으로 예시 문제·폴더 이름을 편집한 이미지', contributed: false },
       { src: 'images/geomate-experience-rotate.gif', label: '도형 체험', alt: '입체도형을 돌려 숨은 별을 찾는 가입 체험', note: '가입 체험의 도형 상호작용·계산과 강조 효과 구현. 전체 화면 흐름은 팀원과 공동 작업' },
       { src: 'images/geomate-experience-fold.gif', label: '전개도 접기', alt: '전개도를 접어 입체도형을 완성하는 가입 체험', note: '전개도 접기 단계의 상호작용과 도형 계산 구현. 가입 흐름은 팀원과 공동 작업' },
       { src: 'images/geomate-experience-section.gif', label: '단면 맞히기', alt: '입체도형을 자를 때 생기는 단면을 고르는 가입 체험', note: '단면을 예상하는 가입 체험의 상호작용·도형 계산 구현. 전체 흐름은 팀원과 공동 작업' },
       { src: 'images/geomate-student-class.png', label: '학생 클래스', alt: '캐릭터와 칠판이 보이는 학생 클래스 참여 화면. 선생님 이름은 가려진 공개용 캡처', note: '클래스 참여·반 전환 화면 구현. 선생님 이름은 공개용 이미지에서 가림' },
+      { src: 'images/geomate-problem-box-public.png', label: '문제함', alt: '도형 문제를 폴더와 카드로 정리한 학생 문제함', note: '문제함의 서비스 화면. 공개용으로 문제·폴더 이름을 편집하고 교재 사진을 도형 그림으로 대체한 이미지', contributed: false },
       { src: 'images/geomate-concept-net.gif', label: '개념학습', alt: '전개도를 접으면 만나는 점을 영상과 도형으로 설명하는 개념학습 화면', note: '전개도와 입체의 관계를 영상으로 살펴보는 팀 서비스 화면. 개념학습 콘텐츠와 렌더러는 팀원 작업', contributed: false },
       { src: 'images/geomate-solve-rotate.gif', label: '도형 조작', alt: '문제 풀이 중 직육면체를 돌려 보는 학습 공간', note: '3D 도형 조작과 문제 풀이 공간을 보여주는 팀 서비스 화면. 도형 렌더러와 풀이 기능은 팀원 작업', contributed: false },
       { src: 'images/geomate-teacher-quest.png', label: '퀘스트 만들기', alt: '선생님이 문제를 선택하고 퀘스트 제목과 마감일을 지정하는 화면', note: '문제·학생 선택, 마감 설정과 퀘스트 배포 흐름 및 API 연동' },
