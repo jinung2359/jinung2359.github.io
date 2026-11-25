@@ -54,9 +54,8 @@ export const projects: Project[] = [
       { src: 'images/geomate-problem-box-public.png', label: '문제함', alt: '도형 문제를 폴더와 카드로 정리한 학생 문제함', note: '문제함의 서비스 화면. 공개용으로 문제·폴더 이름을 편집하고 교재 사진을 도형 그림으로 대체한 이미지', contributed: false },
       { src: 'images/geomate-concept-net.gif', label: '개념학습', alt: '전개도를 접으면 만나는 점을 영상과 도형으로 설명하는 개념학습 화면', note: '전개도와 입체의 관계를 영상으로 살펴보는 팀 서비스 화면. 개념학습 콘텐츠와 렌더러는 팀원 작업', contributed: false },
       { src: 'images/geomate-solve-rotate.gif', label: '도형 조작', alt: '문제 풀이 중 직육면체를 돌려 보는 학습 공간', note: '3D 도형 조작과 문제 풀이 공간을 보여주는 팀 서비스 화면. 도형 렌더러와 풀이 기능은 팀원 작업', contributed: false },
-      { src: 'images/geomate-teacher-quest.png', label: '퀘스트 만들기', alt: '선생님이 문제를 선택하고 퀘스트 제목과 마감일을 지정하는 화면', note: '문제·학생 선택, 마감 설정과 퀘스트 배포 흐름 및 API 연동' },
-      { src: 'images/geomate-admin-reports.png', label: '신고 관리', alt: '관리자 웹에서 문제 해석 오류 신고를 검색하고 상태별로 살펴보는 화면', note: '관리자 웹의 신고 목록·검색·상태별 조회와 처리 흐름 구현' },
-      { src: 'images/geomate-admin-coin.png', label: '코인 지급', alt: '관리자 웹에서 지급 코인과 사유를 입력하는 창', note: '계정 조회와 코인 지급 입력·검증·결과 안내 구현' },
+      { src: 'images/geomate-admin-reports.png', label: '관리자 웹 · 신고', alt: '관리자 웹에서 문제 해석 오류 신고를 검색하고 상태별로 살펴보는 화면', note: '관리자 웹 화면 · 신고 목록·검색·상태별 조회와 처리 흐름 구현' },
+      { src: 'images/geomate-admin-coin.png', label: '관리자 웹 · 코인 지급', alt: '관리자 웹에서 지급 코인과 사유를 입력하는 창', note: '관리자 웹 화면 · 계정 조회와 코인 지급 입력·검증·결과 안내 구현' },
     ],
     contributions: ['관리자 웹의 대시보드·신고·계정 관리와 공통 인증·조회 흐름 구현', '선생님 앱의 반 관리·퀘스트 배포·질문함 화면 및 API 연동', '학생 클래스·학습 기록과 가입 체험의 도형 상호작용 구현'],
     caseStudies: [
