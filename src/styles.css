@@ -220,3 +220,5 @@
 .mobile-stage{min-height:565px}
 .mobile-stage .image-open{width:225px;flex-basis:225px}
 @media(max-width:760px){.container{padding-left:24px;padding-right:24px}.hero{padding:40px 0 48px}.hero-layout{grid-template-columns:1fr;gap:26px;margin-top:28px}.hero-copy h1{font-size:clamp(34px,7.8vw,52px)}.hero-copy>p{font-size:15px;margin-top:24px}.project-heading h2{font-size:30px}.detail-hero h1{font-size:48px}.detail-hero p,.detail-hero-ait p{font-size:18px}.detail-section{padding:50px 0}.overview-body>p{font-size:15px}.web-stage{min-height:260px}.web-stage .image-open{height:210px}.web-stage .adjacent-screen{height:164px}.web-stage .adjacent-screen img{height:144px}.mobile-stage{min-height:560px}.mobile-stage .image-open{width:min(230px,100%);flex-basis:230px}}
+
+.project-preview-geomate,.geomate .web-stage{background:#e8f3f9}

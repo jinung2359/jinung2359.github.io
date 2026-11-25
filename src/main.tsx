@@ -73,7 +73,7 @@ function App() {
           <div className="profile-dialog-visual"><img src="images/profile-jinung.jpg" alt="이진웅 프로필 사진"/><div className="profile-dialog-identity"><span>LEE JINUNG</span><span>FRONTEND DEVELOPER</span></div><div className="profile-dialog-stack"><strong>TECH STACK</strong><div className="profile-dialog-skills"><span>React</span><span>TypeScript</span><span>React Native</span><span>Expo</span><span>Python</span><span>Django</span><span>Vue</span></div></div></div>
         </div>
       </dialog>
-      <section id="work" aria-label="프로젝트"><div className="section-title"><span>SELECTED PROJECTS</span><span>WEB & MOBILE</span></div>{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index}/>)}</section>
+      <section id="work" aria-label="프로젝트"><div className="section-title"><span>SELECTED PROJECTS</span><span>WEB · MOBILE · TABLET</span></div>{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index}/>)}</section>
     </main>}
     <footer className="container"><span>© 2026 이진웅</span></footer>
   </>;

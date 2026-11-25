@@ -40,4 +40,28 @@ export const projects: Project[] = [
       { title: '리포트 수치가 화면마다 다르게 보임', problem: '관리 점수·기간 평균 비율·또래 위치가 비슷한 표현으로 표시', implementation: '지표별 이름과 기준 기간을 명시\n점수·실제 비율·상대 위치를 화면에서 구분' },
     ],
   },
+  {
+    id: 'geomate', name: 'Geomate', category: 'TABLET & WEB APPLICATION', date: '2026.10 – 2026.11', thumbnail: 'images/geomate-experience-rotate.gif',
+    tagline: '도형을 직접 만지며 이해하는 기하 학습',
+    description: '학생이 태블릿에서 도형을 돌리고 펼치며 탐구하고, 선생님과 함께 학습을 이어가는 기하 학습 서비스.',
+    tags: ['TypeScript', 'React Native', 'Expo', 'TanStack Query', 'Zustand', 'React · Vite'],
+    images: [
+      { src: 'images/geomate-experience-rotate.gif', label: '도형 체험', alt: '입체도형을 돌려 숨은 별을 찾는 가입 체험', note: '가입 체험의 도형 상호작용·계산과 강조 효과 구현. 전체 화면 흐름은 팀원과 공동 작업' },
+      { src: 'images/geomate-experience-fold.gif', label: '전개도 접기', alt: '전개도를 접어 입체도형을 완성하는 가입 체험', note: '전개도 접기 단계의 상호작용과 도형 계산 구현. 가입 흐름은 팀원과 공동 작업' },
+      { src: 'images/geomate-teacher-quest.png', label: '퀘스트 만들기', alt: '선생님이 문제를 선택하고 퀘스트 제목과 마감일을 지정하는 화면', note: '문제·학생 선택, 마감 설정과 퀘스트 배포 흐름 및 API 연동' },
+      { src: 'images/geomate-teacher-create-class.png', label: '반 만들기', alt: '선생님이 새로운 클래스 이름을 입력하는 화면', note: '선생님 반 생성 화면과 목록·현황 연결' },
+      { src: 'images/geomate-student-class.png', label: '학생 클래스', alt: '학생의 클래스 참여 화면. 선생님 이름은 가려진 공개용 캡처', note: '참여 코드 입력, 소속 반과 반 바꾸기 화면 구현. 선생님 이름은 공개용 이미지에서 가림' },
+      { src: 'images/geomate-student-class-home.png', label: '클래스 홈', alt: '참여 중인 클래스의 퀘스트와 피드백 요약. 선생님 이름은 가려진 공개용 캡처', note: '학생 클래스 홈과 피드백 탭 구현. 퀘스트 목록은 팀원 작업' },
+      { src: 'images/geomate-learning-records.png', label: '학습 기록', alt: '학생의 전체 학습 기록과 오답 모음 탭', note: '학습 기록 목록·필터와 서버 연동, 문제 이름 조회 캐시 개선' },
+      { src: 'images/geomate-admin-reports.png', label: '신고 관리', alt: '관리자 웹에서 문제 해석 오류 신고를 검색하고 상태별로 살펴보는 화면', note: '관리자 웹의 신고 목록·검색·상태별 조회와 처리 흐름 구현' },
+      { src: 'images/geomate-admin-coin.png', label: '코인 지급', alt: '관리자 웹에서 지급 코인과 사유를 입력하는 창', note: '계정 조회와 코인 지급 입력·검증·결과 안내 구현' },
+      { src: 'images/geomate-concept-net.gif', label: '개념학습', alt: '전개도를 접으면 만나는 점을 영상과 도형으로 설명하는 개념학습 화면', note: '전개도와 입체의 관계를 영상으로 살펴보는 팀 서비스 화면. 개념학습 콘텐츠와 렌더러는 팀원 작업', contributed: false },
+    ],
+    contributions: ['관리자 웹의 대시보드·신고·계정 관리와 공통 인증·조회 흐름 구현', '선생님 앱의 반 관리·퀘스트 배포·질문함 화면 및 API 연동', '학생 클래스·학습 기록과 가입 체험의 도형 상호작용 구현'],
+    caseStudies: [
+      { title: '태블릿에서 조작 기록 답변이 전송되지 않음', problem: '웹에서 되던 Blob 첨부가 Android의 FormData에서 거절됨', implementation: '조작 기록을 임시 파일로 저장해 uri로 첨부\n전송 뒤 파일을 정리하고 기기·테스트로 확인' },
+      { title: '서버 재시작 중 화면마다 다른 오류가 나타남', problem: '게이트웨이 오류 하나만으로 점검 상태를 판단하면 오탐 가능', implementation: '서버 상태를 재확인해 점검 화면을 표시\n복구 뒤 실패한 조회만 다시 요청' },
+      { title: '태블릿 키보드가 입력칸을 가림', problem: '화면 끝까지 그리는 Android 환경에서 키보드가 떠도 앱 영역이 줄지 않음', implementation: '키보드가 가리는 높이를 재는 공통 훅 구현\n입력 영역에 여백을 주어 기기에서 표시 확인' },
+    ],
+  },
 ];

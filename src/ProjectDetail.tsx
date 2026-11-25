@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import type { Project } from './projects';
+import { projects, type Project } from './projects';
 import { ProjectShowcase } from './ProjectShowcase';
 
 type DetailContent = {
@@ -96,11 +96,56 @@ const content: Record<string, DetailContent> = {
       { why: '금융 효율 화면의 관리 점수, 소비 유형의 기간 평균 비율, 리포트의 또래 위치가 비슷한 숫자로 보여 값이 서로 맞지 않는 것처럼 읽혔습니다.', cause: '각 수치의 단위와 기준 기간이 다른데도 짧은 라벨을 공유했고, 점수와 실제 비율의 차이를 화면에서 설명하지 않았습니다.', how: '관리 점수에는 기준월과 0~100점 척도를, 소비 비율에는 분석 개월 수를 표시했습니다. 또래 비교 차트는 실제 비율이 아닌 상대 위치라고 명시하고 코드의 필드 이름도 의미에 맞게 분리했습니다.', after: '사용자가 각 숫자의 의미와 기간을 구분할 수 있습니다. 금융 계산식은 바꾸지 않고 표시만 바로잡았습니다.' },
     ],
   },
+  geomate: {
+    overview: 'Geomate는 학생이 태블릿에서 도형을 직접 돌리고 펼치고 그리며 기하를 이해하도록 돕는 학습 서비스입니다. 문제 사진을 AI가 해석하면 학생이 조건을 확인하고, 학습 공간에서 도형과 힌트를 탐구한 뒤 답을 제출합니다. 선생님은 클래스를 운영하며 퀘스트와 피드백을 제공하고, 관리자 웹에서는 해석 오류 신고와 계정·반을 관리합니다.',
+    background: [
+      { title: '눈으로만 보는 기하의 한계', detail: '입체도형을 머릿속으로 돌리거나 전개도를 접어 보기는 어렵습니다. 답과 해설을 읽기 전에 학생이 직접 조작하며 확인할 공간이 필요했습니다.' },
+      { title: '문제에서 탐구로', detail: '사진에서 읽은 문제 조건을 학생이 원본과 비교하고, 도형 조작과 단계별 힌트로 스스로 생각할 수 있도록 흐름을 구성했습니다.' },
+      { title: '함께 이어지는 학습', detail: '선생님이 반별 퀘스트를 배포하고 질문·피드백을 주며, 학생은 학습 기록과 오답을 다시 확인할 수 있게 했습니다.' },
+    ],
+    features: [
+      { title: '문제 등록과 조건 확인', detail: '사진·갤러리·PDF로 문제를 가져오고, AI가 읽은 조건을 원본과 비교' },
+      { title: '도형 탐구', detail: '입체도형 회전·전개도·단면 조작과 필기, 단계별 힌트' },
+      { title: '답 제출과 변형문제', detail: '제출 뒤 서버 판정과 결과 확인, 숫자를 바꾸거나 거꾸로 푸는 문제' },
+      { title: '개념학습과 학습 기록', detail: '영상·예제로 개념을 익히고 풀이 기록·오답·자주 틀리는 개념 확인' },
+      { title: '클래스와 퀘스트', detail: '반 참여, 선생님의 퀘스트 배포, 질문 답변과 풀이 피드백' },
+      { title: '운영자 관리', detail: '문제 해석 오류 신고 처리, 선생님 권한 신청과 계정·반 조회' },
+    ],
+    roles: [
+      { title: '관리자 웹', detail: 'React·Vite 기반 관리자 웹의 레이아웃과 대시보드, 신고 관리, 계정·반 조회, 선생님 권한 신청 화면을 구현했습니다. 공통 API 클라이언트와 세션 처리, 검색·페이지 조회도 맡았습니다.' },
+      { title: '선생님 앱', detail: '반 생성·설정과 참여 코드, 학생 현황, 퀘스트 만들기·배포, 질문함의 주요 화면과 API 연동을 작업했습니다. 요청이 겹치거나 응답을 놓치는 상황도 화면에 반영했습니다.' },
+      { title: '학생 앱과 가입 체험', detail: '클래스 참여·홈·피드백, 학습 기록 화면을 구현했습니다. 가입 체험에서는 도형을 돌리고 접는 상호작용과 계산을 맡았고, 전체 화면 흐름은 팀원과 함께 만들었습니다.' },
+      { title: '앱 안정성과 검증', detail: '서버 재시작 중 점검 화면을 띄우는 판단과 키보드 가림 대응을 공통 기능으로 구현했습니다. 관리자 웹과 앱의 주요 판단 로직은 테스트로 확인했습니다.' },
+    ],
+    journey: [
+      { step: '01', title: '문제 확인', detail: '문제 사진에서 읽은 조건을 원본과 비교' },
+      { step: '02', title: '도형 탐구', detail: '도형을 조작하고 힌트로 풀이 방향 탐색' },
+      { step: '03', title: '함께 학습', detail: '퀘스트·질문·피드백과 학습 기록으로 다시 확인' },
+    ],
+    screens: [
+      { detail: '별이 숨은 입체도형을 직접 돌려 찾는 가입 체험입니다. 세 단계 중 도형 상호작용·계산·강조 효과를 맡았으며, 진행 흐름은 팀원과 함께 작업했습니다.', evidence: '관련 작업: eda204ac · 882c336d' },
+      { detail: '전개도를 접는 조작으로 평면과 입체의 관계를 체험합니다. 도형 계산과 상호작용을 구현했고, 가입 화면 전체를 단독으로 만든 것은 아닙니다.', evidence: '관련 작업: eda204ac · 882c336d' },
+      { detail: '선생님이 문제와 학생을 고르고 제목·마감일을 정해 퀘스트를 배포합니다. 화면 흐름과 API 연동, 중복 요청을 막는 요청 키 처리를 맡았습니다.', evidence: '관련 작업: 04e10435 외 퀘스트 배포 작업' },
+      { detail: '선생님이 새로운 반을 만드는 화면입니다. 반 목록·생성과 현황 수치를 연결해 반 운영의 시작점을 구성했습니다.', evidence: '관련 작업: 07a11c86 · 반 관리 작업' },
+      { detail: '학생이 참여 코드를 입력해 반에 들어가고 소속 반을 확인합니다. 클래스 참여·반 전환과 화면 높이 대응을 작업했습니다. 공개용 캡처에서는 선생님 이름을 가렸습니다.', evidence: '관련 작업: 50649ac8 · 30e5fa38' },
+      { detail: '학생의 반 홈에서 퀘스트와 피드백으로 이어지는 구조입니다. 반 홈과 피드백 탭을 구현했고, 퀘스트 목록은 팀원이 작업했습니다.', evidence: '관련 작업: 50649ac8 · 30e5fa38' },
+      { detail: '전체 풀이 기록과 오답·취약 개념을 찾아보는 화면입니다. 목록·필터·서버 연동과 문제 이름 조회 캐시를 작업했습니다.', evidence: '관련 작업: f9a65765 · d5eaa0f2' },
+      { detail: '관리자 웹에서 학생의 문제 해석 오류 신고를 검색하고 상태별로 살펴봅니다. 신고 목록·상세·처리 흐름을 구현했고 실제 운영에서 신고 확인에 사용했습니다.', evidence: '관련 작업: 8ac7011e · dbfa0db1' },
+      { detail: '관리자 웹에서 코인 지급 금액과 사유를 입력합니다. 입력값 검증과 결과를 알 수 없는 실패의 안내, 같은 내용의 중복 지급 방지를 구현했습니다.', evidence: '관련 작업: e004f9ca' },
+      { detail: '영상과 도형으로 전개도의 접힘을 설명하는 개념학습입니다. 콘텐츠와 렌더러는 팀원이 만들었으며, 본인은 영상 배속 버튼을 개선했습니다.', evidence: '관련 작업: cc33377e' },
+    ],
+    stories: [
+      { why: '선생님이 도형 조작 과정을 답변으로 보내려 할 때, 웹에서는 되지만 실제 태블릿에서는 전송이 실패했습니다.', cause: 'Android의 React Native FormData는 파일을 uri·이름·형식으로 첨부해야 하는데, 웹 방식의 Blob을 보내고 있었습니다.', how: '조작 기록을 임시 파일로 저장하고 해당 uri를 첨부하도록 바꿨습니다. 전송이 끝나면 임시 파일을 정리하도록 했습니다.', after: '태블릿에서 답변 전송을 확인했고, 첨부 형식과 임시 파일 정리 동작을 테스트로 고정했습니다.' },
+      { why: '서버가 배포나 재시작으로 잠시 멈추면 앱의 여러 화면에서 서로 다른 오류가 나타나, 사용자는 앱이 고장 난 것처럼 보였습니다.', cause: 'nginx가 보낸 502·503·504는 서버 장애의 단서지만, 오래 걸린 요청 하나도 504가 될 수 있어 응답만으로 점검 상태를 확정할 수 없었습니다.', how: '서버 상태를 재확인한 뒤에만 점검 화면을 띄우고 닫도록 했습니다. 여러 실패가 겹쳐도 확인 요청은 한 번만 보내고, 복구 후에는 실패한 조회만 다시 받게 했습니다.', after: '실제 복구 동작을 확인했습니다. 오탐 방지와 조회 재시도 판단은 테스트로 검증하고 프론트 CI 단계에 추가했습니다.' },
+      { why: '태블릿에서 입력할 때 키보드가 화면을 덮어 입력칸이 보이지 않는 경우가 있었습니다.', cause: 'Android의 화면 끝까지 그리는 환경에서는 키보드가 올라와도 앱 영역이 자동으로 줄어들지 않았습니다.', how: '키보드가 가리는 높이를 측정하는 공통 훅을 만들고, 입력 화면에 그만큼의 여백을 주었습니다. 측정값이 계속 바뀌지 않도록 높이가 일정한 영역을 기준으로 삼았습니다.', after: '키보드가 열린 상태에서도 입력칸을 볼 수 있는 것을 확인했고, 공통 동작을 테스트에 반영했습니다.' },
+    ],
+  },
 };
 
 export function ProjectDetail({ project }: { project: Project }) {
   const detail = content[project.id];
   const isAit = project.id === 'ait';
+  const nextProject = projects[(projects.findIndex(item => item.id === project.id) + 1) % projects.length];
   useEffect(() => {
     document.title = `${project.name} | 이진웅 포트폴리오`;
     window.scrollTo({ top: 0 });
@@ -118,6 +163,6 @@ export function ProjectDetail({ project }: { project: Project }) {
     {detail.roles && <section className="detail-section"><div className="detail-section-heading"><span className="label">MY ROLE · FRONTEND</span><h2>담당 역할</h2></div><div className="role-list">{detail.roles.map((item, index) => <article className="role-item" key={item.title}><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.detail}</p></article>)}</div></section>}
     {!detail.features && <section className="detail-section"><div className="detail-section-heading"><span className="label">USER FLOW</span><h2>사용자 흐름과 담당 영역</h2></div><div className="journey-grid">{detail.journey.map(step => <div className="journey-step" key={step.step}><span>{step.step}</span><h3>{step.title}</h3><p>{step.detail}</p></div>)}</div></section>}
     <section className="detail-section troubleshooting" aria-label={`${project.name} 문제 해결`}><div className="detail-section-heading"><span className="label">PROBLEM SOLVING</span><h2>문제 해결 <span>{String(project.caseStudies.length).padStart(2, '0')}</span></h2></div>{project.caseStudies.map((caseStudy, index) => <details className="story" key={caseStudy.title} open={index === 0}><summary className="detail-toggle"><span className="story-title"><span className="story-number">0{index + 1}</span><strong>{caseStudy.title}</strong></span><span className="story-sign" aria-hidden="true"/></summary><div className="case-content"><div><span className="label">상황</span><p>{detail.stories[index].why}</p></div><div><span className="label">원인</span><p>{detail.stories[index].cause}</p></div><div><span className="label">수정</span><p>{detail.stories[index].how}</p></div><div><span className="label">달라진 동작</span><p>{detail.stories[index].after}</p></div></div></details>)}</section>
-    <div className="detail-bottom"><a href="#work">프로젝트 목록으로</a><a href={`#/${project.id === 'ait' ? 'dodam' : 'ait'}`}>{project.id === 'ait' ? 'Dodam' : 'Ait'} 살펴보기</a></div>
+    <div className="detail-bottom"><a href="#work">프로젝트 목록으로</a><a href={`#/${nextProject.id}`}>{nextProject.name} 살펴보기</a></div>
   </main>;
 }

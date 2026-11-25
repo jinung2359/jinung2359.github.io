@@ -1,8 +1,8 @@
 # 이진웅 React 포트폴리오
 
-React · TypeScript · Vite로 구성한 GitHub Pages용 포트폴리오입니다. 첫 화면에는 프로젝트 썸네일과 짧은 소개만 두었습니다. 썸네일을 누르면 Ait·Dodam의 별도 페이지에서 기존 이미지 넘기기, 담당 기능, 주요 개발 경험과 추가 설명을 볼 수 있습니다.
+React · TypeScript · Vite로 구성한 GitHub Pages 포트폴리오입니다. 첫 화면의 썸네일을 누르면 Ait·Dodam·Geomate의 상세 페이지에서 핵심 화면, 프로젝트 개요, 담당 역할과 문제 해결 사례를 볼 수 있습니다.
 
-프로젝트 페이지는 `/#/ait`, `/#/dodam` 주소로 바로 열 수 있습니다. 새로고침해도 GitHub Pages에서 열리도록 해시 주소를 사용했습니다.
+프로젝트 페이지는 `/#/ait`, `/#/dodam`, `/#/geomate` 주소로 바로 열 수 있습니다. 새로고침해도 GitHub Pages에서 열리도록 해시 주소를 사용했습니다.
 
 ## 실행
 
@@ -19,15 +19,9 @@ npm run dev
 npm run build
 ```
 
-## 기존 저장소에 적용
+## 배포
 
-1. 클론한 `jinung2359.github.io` 폴더에 이 프로젝트의 파일을 복사합니다. 기존 파일은 변경 내용을 비교하고 교체하세요. `.git` 폴더는 유지합니다.
-2. `.github/workflows/pages.yml`, `package-lock.json`, `src`, `public`도 포함하여 커밋합니다. `node_modules`와 `dist`는 올리지 않습니다.
-3. GitHub 저장소 **Settings → Pages → Source**를 기존 `Deploy from a branch`에서 **GitHub Actions**로 변경합니다. React 소스는 그대로 웹페이지가 되지 않으므로 이 변경이 필요합니다.
-4. `main`에 푸시하면 포함된 워크플로가 빌드 후 Pages에 배포합니다.
-5. Actions의 배포 완료를 확인한 뒤 `https://jinung2359.github.io`로 접속합니다.
-
-아직 실제 GitHub 저장소에 적용·푸시하지 않았습니다.
+`main`에 푸시하면 `.github/workflows/pages.yml`이 빌드하고 GitHub Pages에 배포합니다. `node_modules`와 `dist`는 커밋하지 않습니다. 배포 결과는 `https://jinung2359.github.io`에서 확인합니다.
 
 ## 내용 수정
 
@@ -44,6 +38,9 @@ npm run build
 
 - Ait 5장: 대시보드, AI 모의면접, 면접 리포트, 스터디 라운지, 마이페이지
 - Dodam 6장: 홈, 발견, 리포트, 가계부, 브리핑, 구독 목록
+- Geomate 10장: 가입 체험, 선생님 퀘스트·반 만들기, 학생 클래스·학습 기록, 관리자 신고·코인 지급, 개념학습. GIF 3장을 포함합니다.
+
+Geomate는 `geomate-portfolio-facts.md`의 2026-11-25 확인 내용을 바탕으로 소개했습니다. 학생 클래스 캡처는 이름이 가려진 `geomate-portfolio-screens/02_학생`의 공개용 사본만 사용했고, `_원본_가림전`의 6장은 포함하지 않았습니다. 참여 코드가 보이는 반 정보 화면과 시판 교재 사진이 보이는 신고 상세·문제함 화면도 포함하지 않았습니다. 팀원 이름은 페이지 문구에 쓰지 않았습니다.
 
 기여 근거가 확인된 화면은 ‘내 기여’로, 프로젝트 이해를 돕기 위해 추가한 Ait 화면은 ‘프로젝트 화면’으로 구분했습니다. 화면 전체를 단독 구현했다는 의미가 아닙니다. 리포트처럼 개선 작업이 확인되는 화면은 '표시 개선'으로 범위를 한정했습니다.
 
